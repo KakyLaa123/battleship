@@ -8,10 +8,9 @@
     <title>Battleship</title>
 </head>
 <body>
-    <div class="first-person">
+    <div class="big-box">
         <div class="board">
             <ul class="numbers">
-                <br>
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
@@ -41,10 +40,17 @@
                 </div>
             </div>
         </div>
-        <button type="button" id="restart">Перераспределить корабли</button>
+        <div class="main-menu">
+            <button type="button" id="start" disabled="false">Начать бой</button>
+            <button type="button" id="random">Распределить флот случайно</button>
+            <button type="button" id="restart">Перераспределить корабли</button>
+            <button type="button" id="rules-btn">Правила</button>
+            <br>
+            <br>
+            <span id="who-is-moving"></span>
+        </div>
         <div class="board">
             <ul class="numbers">
-                <br>
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
@@ -56,22 +62,46 @@
                 <li>9</li>
                 <li>10</li>
             </ul>
-            <div class="buttons">
-                
+            <div class="block-columns">
+                <ul class="letters">
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                    <li>E</li>
+                    <li>F</li>
+                    <li>G</li>
+                    <li>H</li>
+                    <li>I</li>
+                    <li>J</li>
+                </ul>
+                <div class="buttons">
+                    
+                </div>
             </div>
-            <ul class="letters">
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
-                <li>D</li>
-                <li>E</li>
-                <li>F</li>
-                <li>G</li>
-                <li>H</li>
-                <li>I</li>
-                <li>J</li>
-            </ul>
         </div>
+    </div>
+    <div class="modal">
+        <button type="button" class="modal-close none">
+            X
+        </button>
+        <div class="hello">
+            <p>Здравствуйте. Добро пожаловать в <span class="battleship-game">Морской бой!</span></p>
+        </div>
+        <div clas="rules">
+            <p>
+                <ul>
+                    <li>Чтобы расположить флот случайным образом, нажмите на кнопку "Распределить флот случайно"</li>
+                    <li>Чтобы расположить корабль горизонтально, кликните на ячейку левой кнопкой мыши</li>
+                    <li>Чтобы расположить корабль вертикально, Кликните на ячейку правой кнопкой мыши</li>
+                    <li>Если корабль не помещается, он расположится в обратном порядке</li>
+                </ul>
+            </p>
+        </div>
+        <form action="#" class="confirmRules">
+            <input type="text" name="name" id="playerName" placeholder="Введите имя" required>
+            <input type="submit" id="confirmRules" value="Понятно">
+        </form>
     </div>
     <script src="/script.js"></script>
 </body>
